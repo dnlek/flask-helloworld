@@ -1,0 +1,7 @@
+wget http://pypi.python.org/packages/source/v/virtualenv/virtualenv-1.6.4.tar.gz
+tar xzf virtualenv-1.6.4.tar.gz
+python virtualenv-1.6.4/virtualenv.py --no-site-packages --distribute venv
+rm -rf virtualenv-1.6.4
+./venv/bin/pip install virtualenv-1.6.4.tar.gz
+./venv/bin/pip install -r requirements.txt
+./venv/bin/coverage run tests.py && ./venv/bin/coverage report
