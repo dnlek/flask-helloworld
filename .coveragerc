@@ -1,0 +1,4 @@
+[run]
+source=.
+include=app.py
+ommit=*__init__*, tests.py, venv/*
