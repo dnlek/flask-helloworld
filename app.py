@@ -1,3 +1,4 @@
+import os
 from flask import Flask
 
 
@@ -6,6 +7,6 @@ def create_app():
 
     @app.route('/')
     def hello_world():
-        return 'Hello World!'
+        return 'Hello World! hostname: {0}'.format(os.environ.get('HOSTNAME', 'unknown'))
 
     return app
